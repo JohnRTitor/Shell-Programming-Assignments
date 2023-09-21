@@ -11,12 +11,12 @@ read -p "Enter c: " c
 
 # calculate by giving input to bc (basic calculator) command using pipe
 # Calculate the discriminant
-discriminant=$(echo "scale=2; $b^2 - 4*$a*$c" | bc)
+discriminant=$(echo "scale=2; $b^2 - 4 * $a * $c" | bc)
 
 # Real and different roots
 if [ $discriminant -gt 0 ]; then
-    root1=$(echo "scale=2; (-$b + sqrt($discriminant))/(2*$a)" | bc)
-    root2=$(echo "scale=2; (-$b - sqrt($discriminant))/(2*$a)" | bc)
+    root1=$(echo "scale=2; (-$b + sqrt($discriminant))/(2 * $a)" | bc)
+    root2=$(echo "scale=2; (-$b - sqrt($discriminant))/(2 * $a)" | bc)
 
     echo "Roots are real and different"
     echo "Root 1: $root1"
@@ -24,14 +24,14 @@ if [ $discriminant -gt 0 ]; then
 
 # Real and equal roots
 elif [ $discriminant -eq 0 ]; then
-    root1=$(echo "scale=2; (-$b + sqrt($discriminant))/(2*$a)" | bc)
+    root1=$(echo "scale=2; (-$b + sqrt($discriminant))/(2 * $a)" | bc)
 
     echo "Roots are real and equal"
     echo "Root 1 and Root 2: $root1"
 
 # Complex roots
 else
-    real_part=$(echo "scale=2; -$b/(2*$a)" | bc)
+    real_part=$(echo "scale=2; -$b/(2 * $a)" | bc)
     imaginary_part=$(echo "scale=2; sqrt(-1 * $discriminant)/(2 * $a)" | bc)
 
     echo "Roots are complex and different"
