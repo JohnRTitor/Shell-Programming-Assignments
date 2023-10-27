@@ -1,0 +1,26 @@
+                Algorithm: Palindrome number checking
+
+Input:- A number (num)
+Output:- Whether the number is palindrome or not
+
+Steps:-
+
+1: Start
+2: Print "Enter the number: "
+3: Read num
+4: temp ← num, reverse ← 0 // temp is a temporary variable used to calculate the reverse
+5: While temp < 0 do
+    // calculate the remainder, to get the last digit
+    5.1: rem ← temp % 10
+    // add to reverse
+    5.2: reverse ← reverse * 10 + rem
+    # trim the last digit
+    5.3: temp ← temp / 10
+6: EndWhile
+7: Print "The reverse of ", num, " is ", reverse
+8: If num = reverse then
+    8.1: Print num, " is palindrome."
+9: Else
+    9.1: num, " is not palindrome."
+10: EndIf
+11: Stop

@@ -1,0 +1,23 @@
+                Algorithm: Fibonacci Series
+
+Input:- The number of terms (terms)
+Output:- The Fibonacci series containing that number of terms
+
+Steps:-
+
+1: Start
+2: Print "How many terms you want to print? "
+3: Read terms
+4: If terms < 1 then
+    4.1: Print "Invalid terms count."
+    4.2: Stop
+5: EndIf
+6: Print "The fibonacci series is: "
+7: num1 ← 0, num2 ← 1 // first two terms
+8: Print num1, num2
+9: For i = 3 to terms do
+    9.1: nextnum ← num1 + num2
+    // print the series
+    9.2: Print nextnum
+    9.3: num1 ← num2, num2 ← nextnum
+10: EndFor
