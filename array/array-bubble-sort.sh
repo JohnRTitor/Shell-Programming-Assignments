@@ -10,9 +10,9 @@ for number in ${arr[@]}; do
 done
 
 swapped=false
-for ((i = 0; i < size - 1; i++)); do
-    for ((j = 0; j < size - 1 - i; j++)); do
-        if [ ${arr[j]} -gt ${arr[j + 1]} ]; then
+for ((i=0; i<$size - 1; i++)); do
+    for ((j=0; j<$size-1-i; j++)); do
+        if [ ${arr[j]} -gt ${arr[j+1]} ]; then
             # use a temporary third variable to swap arr[j] and arr[j+1]
             temp=${arr[j]}
             arr[j]=${arr[j+1]}
@@ -21,7 +21,7 @@ for ((i = 0; i < size - 1; i++)); do
             swapped=true
         fi
     done
-    if [ $swapped = true ]; then
+    if [ $swapped = false ]; then
         break
     fi
 done

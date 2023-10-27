@@ -1,0 +1,19 @@
+                Algorithm - Factorial of a number
+
+Input:- A positive number (num)
+Output:- Factorial of the number (fact)
+
+Steps:-
+
+1: Start
+2: Print "Enter the number: "
+3: Read num
+4: fact ← 1
+5: If num != 0 then
+    5.2: For i = num to 1 do
+        5.2.1: fact ← fact * i
+        5.2.2: i ← i - 1
+    5.3: EndFor
+6: EndIf
+7: Print "Factorial of", num, "is", fact
+8: Stop
