@@ -1,0 +1,28 @@
+                Algorithm: Prime number checking
+
+Input:- A number (num)
+Output:- Whether the number is prime or not
+
+
+Steps:-
+
+1: Start
+2: Print "Enter the number: "
+3: Read num
+4: If num = 1 OR num = 0 then
+    4.1: Print "1 and 0 are neither prime nor composite."
+    4.2: Stop
+5: EndIf
+6: prime ← true
+7: For i = 2 to sqrt(num) do
+    7.1: If num % i = 0 then
+        7.1.1: prime ← false
+    7.2: EndIf
+    7.3: i ← i + 1
+8: EndFor
+9: If prime = true then
+    9.1: Print num, " is prime."
+10: Else
+    10.1: num, " is not prime."
+11: EndIf
+12: Stop

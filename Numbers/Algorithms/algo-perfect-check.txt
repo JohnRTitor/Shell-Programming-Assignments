@@ -1,0 +1,26 @@
+                Algorithm: Perfect number checking
+
+Input:- A number (num)
+Output:- Whether the number is perfect or not
+
+
+Steps:-
+
+1: Start
+2: Print "Enter the number: "
+3: Read num
+4: sum ← 0
+// a number is said to be perfect
+// if the sum of its factors is equal to the number itself
+5: For i = 1 to num/2 do
+    5.1: If num % i = 0 then
+        5.1.1: sum ← sum + i
+    5.2: EndIf
+    5.3: i ← i + 1
+6: EndFor
+7: If sum = num then
+    7.1: Print num, " is a perfect number."
+8: Else
+    8.1: num, " is not a perfect number."
+9: EndIf
+10: Stop
