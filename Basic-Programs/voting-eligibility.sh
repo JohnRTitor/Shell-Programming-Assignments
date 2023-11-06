@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-read -p "Enter your Age : " age
+read -p "Enter your age: " age
 
 if [ $age -ge 18 ]; then
     echo "You are eligible to vote."

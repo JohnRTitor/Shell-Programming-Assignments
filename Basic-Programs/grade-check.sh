@@ -16,3 +16,4 @@ elif [ $percentage -ge 50 ]; then
     echo "Grade: D"
 else
     echo "Grade: F"
+fi
