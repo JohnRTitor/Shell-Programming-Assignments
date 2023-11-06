@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Get the array
 read -p "Enter space-seperated numbers: " numbers
