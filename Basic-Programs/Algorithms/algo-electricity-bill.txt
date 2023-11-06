@@ -11,13 +11,13 @@ Steps :
 4: units ← current - previous
 5: serviceCharge ← 50
 6: If units < 100 then
-6.1:    bill ← units*3.5
+    6.1: bill ← units*3.5
 7: Else If units < 200 then
-7.1:    bill ← 100*3.5 + (units-100)*4.5
+    7.1: bill ← 100*3.5 + (units-100)*4.5
 8: Else If units < 300 then
-8.1:    bill ← 100*3.5 + 100*4.5 + (units-200)*5.5
+    8.1: bill ← 100*3.5 + 100*4.5 + (units-200)*5.5
 9: Else
-9.1:    bill ← 100*3.5 + 100*4.5 + 100*5.5 + (units-300)*6
+    9.1: bill ← 100*3.5 + 100*4.5 + 100*5.5 + (units-300)*6
 10: EndIf
 11: bill ← bill+serviceCharge
 12: Print units

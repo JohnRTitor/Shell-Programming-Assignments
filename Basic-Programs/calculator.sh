@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # get two numbers from stdin
 read -p "Enter first number: " num1

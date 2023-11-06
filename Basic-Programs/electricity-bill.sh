@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Prompt the user to enter the current and previous meter readings
 read -p "Enter the Current Electric Meter Reading : " current

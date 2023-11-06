@@ -1,0 +1,16 @@
+                Algorithm - Gross Salary
+
+Input: User's basic salary (basic)
+Output: Display the Gross salary of the user.
+
+Steps:
+
+1: Start
+2: Read Basic //Basic salary of the user.
+3: If basic > 15000 then
+    3.1:    gross ← basic + 30/100*basic
+4: Else
+    4.1:    gross ← basic + 25/100*basic
+5: EndIf
+6: Print the gross salary
+7: Stop

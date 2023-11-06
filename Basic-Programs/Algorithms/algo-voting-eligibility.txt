@@ -1,0 +1,15 @@
+                Algorithm - voting Eligibility
+
+Input: User's age (age)
+Output: Print whether the user is eligible to vote or not.
+
+Steps:
+
+1: Start
+2: Read age //User's age
+3: If age >= 18 then
+    3.1: Print "You are eligible to vote."
+4: Else
+    4.1: Print "You are not eligible to vote.Please wait for (18-age) years."
+5: EndIf
+6: Stop

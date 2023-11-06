@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # perfect numbers are the numbers that 
 # are equal to the sum of their proper divisors
