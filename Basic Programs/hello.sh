@@ -1,8 +1,5 @@
-#!/bin/bash
-
-# Author : Masum
-# Script follows here:
+#!/usr/bin/env bash
 
 echo "What is your name?"
-read PERSON
-echo "Hello, $PERSON"
+read name
+echo "Hello, $name"

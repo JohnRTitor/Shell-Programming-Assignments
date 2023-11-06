@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # This program is used to calculate the roots of a quadratic equation
 # Given the coefficients a, b, and c, the program will calculate the roots
