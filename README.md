@@ -27,10 +27,10 @@ Feel free to explore the folders to delve into various scripting challenges and 
 
 ## License
 
-This repository is licensed under the [Apache 2.0 License](LICENSE). Please review the license file for more details.
+You are welcome to use/modify/distribute the code as per the [Apache 2.0 License](LICENSE). Please review the license file for more details.
 
 ## Contributions
 
-I appreciate your interest, but at the moment, I am not accepting contributions or issues. This repository is primarily for personal coursework storage and reference.
+Contributions are primarily done by my classmates. However if you are interested in fixing bugs, or adding basic beginner level general problems, you are requested to follow our [contributing guidelines](CONTRIBUTING.md).
 
 Happy coding!
