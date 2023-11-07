@@ -1,23 +1,21 @@
-#!/usr/bin/env bash
+#!usr/bin/env bash
 
-# Get the array
-read -p "Enter space-seperated numbers: " arr
+# Read space-separated numbers into an array
+read -p "Enter space-separated numbers: " input
+IFS=' ' read -ra arr <<< "$input"
 
 # Determine the size
-size=0
-for number in ${arr[@]}; do
-    size=$(($size + 1))
-done
+size=${#arr[@]}
 
 swapped=false
-for ((i=0; i<$size - 1; i++)); do
-    for ((j=0; j<$size-1-i; j++)); do
+for ((i=0; i<size-1; i++)); do
+    for ((j=0; j<size-1-i; j++)); do
         if [ ${arr[j]} -gt ${arr[j+1]} ]; then
-            # use a temporary third variable to swap arr[j] and arr[j+1]
+            # Use a temporary variable to swap arr[j] and arr[j+1]
             temp=${arr[j]}
-            arr[j]=${arr[j+1]}
+            arr[j]="${arr[j+1]}"
             arr[j+1]=$temp
-            # set swapped flag to true
+            # Set swapped flag to true
             swapped=true
         fi
     done
@@ -26,7 +24,7 @@ for ((i=0; i<$size - 1; i++)); do
     fi
 done
 
-echo "Sorted Array: "
-for number in ${arr[@]}; do
-    echo $number
+echo "Sorted Array:"
+for number in "${arr[@]}"; do
+    echo "$number"
 done
