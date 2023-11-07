@@ -1,0 +1,26 @@
+                Algorithm: Bubble Sort
+
+Input: A one dimensional array of numbers (arr)
+Output: Display the elements of the array (arr) after sorting.
+
+Steps:
+
+1: Start
+2: Read arr //Array of elements
+3: swapped ← 0, size ← len(arr) //  size : size of the array
+4: For i=0 to size-1 do
+    4.1: for j=0 to size-1-i do
+        4.1.1: If arr[j] > arr[j+1] then
+            4.1.1.1: temp ← arr[j]
+            4.1.1.2: arr[j] ← arr[j+1]
+            4.1.1.3: arr[j+1] ← temp
+            4.1.1.4: swapped ← 1
+        4.1.2: EndIf
+    4.2: EndFor
+    4.3: If swapped = 0 then
+        4.3.1: Exit
+    4.4: EndIf
+5: EndFor
+6: For i=0 to size-1 do //Displaying the elements after sorting
+    6.1: Print arr[i]
+7: EndFor
