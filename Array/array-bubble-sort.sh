@@ -1,4 +1,4 @@
-#!/bin/bash
+#!usr/bin/env bash
 
 # Read space-separated numbers into an array
 read -p "Enter space-separated numbers: " input
