@@ -1,8 +1,10 @@
-#!usr/bin/env bash
+#!/usr/bin/env bash
 
 # Read space-separated numbers into an array
 read -p "Enter space-separated numbers: " input
 IFS=' ' read -ra arr <<< "$input"
+
+echo "Original array: ${arr[@]}"
 
 # Determine the size
 size=${#arr[@]}
@@ -24,7 +26,4 @@ for ((i=0; i<size-1; i++)); do
     fi
 done
 
-echo "Sorted Array:"
-for number in "${arr[@]}"; do
-    echo "$number"
-done
+echo "Sorted array: ${arr[@]}"

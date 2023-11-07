@@ -7,8 +7,8 @@ Steps:
 
 1: Start
 2: Read arr //Array of elements
-3: swapped = 0
-4: For i=0 to size-1 do //  size : size of the array
+3: swapped ← 0, size ← len(arr) //  size : size of the array
+4: For i=0 to size-1 do
     4.1: for j=0 to size-1-i do
         4.1.1: If arr[j] > arr[j+1] then
             4.1.1.1: temp ← arr[j]
