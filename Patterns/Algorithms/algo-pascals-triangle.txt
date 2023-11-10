@@ -1,0 +1,31 @@
+                Algorithm - Electricity Bill
+
+Input:- Number of rows (rows)
+Output:- Pascal's Triangle with desired number of rows
+
+Steps:-
+
+1: Start
+2: Print "How many rows? "
+3: Read rows
+4: For i=0 to rows do // row controlling loop
+    4.1: For space=0 to (rows - i) do
+        4.1.1: Print " " // space controlling loop
+        4.1.2: space ← space + 1
+    4.2: EndFor
+    4.3: For j=0 to i do
+        4.3.1: Print nCr(i, j) // element controlling loop
+        4.3.2: j ← j + 1
+    4.4: EndFor
+    4.5: Print newline
+    4.6: i ← i + 1
+5: EndFor
+6: Stop
+
+                Procedure nCr (n, r)
+
+Steps:-
+
+1: Begin Procedure
+    2: Return (factorial(n) / ( factorial(n - r) * factorial(r) ))
+3: End Procedure
