@@ -20,4 +20,5 @@ Steps:-
     // print the series
     9.2: Print nextnum
     9.3: num1 ← num2, num2 ← nextnum
+    9.4: i ← i + 1
 10: EndFor

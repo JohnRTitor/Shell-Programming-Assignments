@@ -15,13 +15,13 @@ bill=0
 
 # Calculate the bill based on the unit consumption
 if [ $units -le 100 ]; then
-  bill=$(echo "$units * 3.5" | bc)
+    bill=$(echo "$units * 3.5" | bc)
 elif [ $units -le 200 ]; then
-  bill=$(echo "(100 * 3.5) + (($units - 100) * 4.5)" | bc)
+    bill=$(echo "(100 * 3.5) + (($units - 100) * 4.5)" | bc)
 elif [ $units -le 300 ]; then
-  bill=$(echo "(100 * 3.5) + (100 * 4.5) + (($units - 200) * 5.5)" | bc)
+    bill=$(echo "(100 * 3.5) + (100 * 4.5) + (($units - 200) * 5.5)" | bc)
 else
-  bill=$(echo "(100 * 3.5) + (100 * 4.5) + (100 * 5.5) + (($units - 300) * 6)" | bc)
+    bill=$(echo "(100 * 3.5) + (100 * 4.5) + (100 * 5.5) + (($units - 300) * 6)" | bc)
 fi
 
 # Add the service charge to the bill

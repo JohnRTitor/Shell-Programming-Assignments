@@ -1,9 +1,9 @@
-                Algorithm - Electricity Bill
+                Algorithm - Electricity Bill Calculation
 
-Input : Current Reading (current), Previous Reading (previous)
-Output : Units consumed (units), Bill Amount (bill)
+Input:- Current Reading (current), Previous Reading (previous)
+Output:- Units consumed (units), Bill Amount (bill)
 
-Steps :
+Steps:-
 
 1: Start
 2: Read current //Current electricity meter reading
