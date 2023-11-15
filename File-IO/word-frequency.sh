@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# WIP: File not found error for some reason
+
 read -p "Enter the file path: " file
 
 # Check if the file exists

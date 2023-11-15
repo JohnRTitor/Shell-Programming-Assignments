@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# perfect numbers are the numbers that 
+# perfect numbers are the numbers that
 # are equal to the sum of their proper divisors
 # 6 = 1 + 2 + 3 = 1 x 2 x 3
 
