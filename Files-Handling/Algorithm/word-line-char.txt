@@ -1,15 +1,16 @@
-                Algorithm - Word-Line-character-Count
+                Algorithm - Word-Line-Character-Count
 
-Input: Name of the file (fileName)
+Input: Path of the file (file_name)
 Output: Display the number of lines, words and character in the file
+Data Structure: One Dimensional Array
 
 Steps:
 
 1: Start
-2: Read fileName //Name of the file
-3: values ← wc -l -w -m fileName //This command is used to count lines, words and characters.
-4: valuesArray[] ← values. //Array assignment to extract individual values.
-5: Print valuesArray[0] //Number of lines in the file
-6: Print valuesArray[1] //Number of words in the file
-7: Print valuesArray[2] //Number of characters in the file
+2: Read file_name //Name of the file
+3: values ← wc -l -w -m file_name //This command is used to count lines, words and characters.
+4: values_array[] ← values //Array assignment to extract individual values.
+5: Print values_array[0] //Number of lines in the file
+6: Print values_array[1] //Number of words in the file
+7: Print values_array[2] //Number of characters in the file
 8: Stop
