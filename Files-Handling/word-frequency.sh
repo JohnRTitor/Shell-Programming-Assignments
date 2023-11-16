@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 
-# WIP: File not found error for some reason
-
-read -p "Enter file path: (without quotes)" file
+read -p "Enter file path (without quotes): " file
 
 # Check if the file exists
 if [ ! -f "$file" ]; then

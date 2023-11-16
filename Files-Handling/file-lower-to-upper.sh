@@ -1,15 +1,16 @@
 #!/usr/bin/env bash
 
-read -p "Enter the filename : " fileName
+read -p "Enter file path (without quotes): " file_name
 
 # Check if the file exists
-if [ ! -f "$fileName" ]; then
-    echo "Error: File '$fileName' not found."
+if [ ! -f "$file_name" ]; then
+    echo "Error: File '$file_name' not found."
     exit 1
 fi
 
-# Convert content to uppercase and overwrite the original file
-tr '[:lower:]' '[:upper:]' < "$fileName" > "$fileName.tmp"
-mv "$fileName.tmp" "$fileName"
+# Convert content to uppercase and save it to a temporary file
+tr '[:lower:]' '[:upper:]' < "$file_name" > "$file_name.tmp"
+# Overwrite the original file
+mv "$file_name.tmp" "$file_name"
 
-echo "Content of $fileName has been converted from lowercase to uppercase."
+echo "Content of $file_name has been converted from lowercase to uppercase."

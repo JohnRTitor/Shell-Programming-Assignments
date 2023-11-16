@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-read -p "Enter file path: (without quotes)" file_name
+read -p "Enter file path (without quotes): " file_name
 
 # Use awk to get lines, words, and characters
 values=$(wc -l -w -m "$file_name")
