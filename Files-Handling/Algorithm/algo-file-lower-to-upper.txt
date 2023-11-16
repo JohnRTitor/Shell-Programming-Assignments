@@ -1,0 +1,16 @@
+                Algorithm - File-Lower-To-Upper
+
+Input: Path of the file (fileName)
+Output: A proper message for successful operation and failure.
+
+Steps:
+
+1: Start
+2: Read the fileName //Name or Path of the file
+3: If fileName = NULL then
+    3.1: Exit
+4: EndIf
+5: tr '[:lower:]' '[:upper:]' < "$fileName" > "$fileName.tmp" // This command is used to translate or delete strings.We used it to convert the strings to upper case and store it in temporary file.
+6: mv "$fileName.tmp" "$fileName" //command to move the content of a file to another file.
+7: Print "Content has been updated successfully"
+8: Stop
