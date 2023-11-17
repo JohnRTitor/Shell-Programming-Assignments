@@ -1,0 +1,16 @@
+                Algorithm - Leapyear Check
+
+Input:- Year to check (year)
+Output:- Leap year or not
+
+Steps:-
+
+1: Start
+2: Print "Enter a year: "
+3: Read year
+4: If (year mod 400 = 0) OR (year mod 4 = 0 AND year mod 100 ≠ 0) then
+    4.1: Print year, " is a leap year."
+5: Else
+  5.1: Print year, " is not a leap year."
+6: EndIf
+7: Stop
