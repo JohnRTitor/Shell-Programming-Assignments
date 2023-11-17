@@ -1,0 +1,29 @@
+name: Shell Check
+
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: [ "main", "dev"]
+    paths:
+      - '**/*.sh'
+  pull_request:
+    branches: [ "main" ]
+    paths:
+      - '**/*.sh'
+
+jobs:
+  shell-check:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up ShellCheck
+      run: |
+        sudo apt-get install shellcheck
+
+    - name: Run ShellCheck
+      run: |
+        shellcheck $(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep '\.sh$')
+        
