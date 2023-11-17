@@ -7,10 +7,16 @@ Data Structure: One Dimensional Array
 Steps:
 
 1: Start
-2: Read file_name //Name of the file
-3: values_array ← file_count(file_name, LINE, WORD, CHAR) // Used to count lines, words and characters
-// Equivalent to wc -l -w -m file_name command in Linux
-4: Print values_array[0] //Number of lines in the file
-5: Print values_array[1] //Number of words in the file
-6: Print values_array[2] //Number of characters in the file
-7: Stop
+2: Print "Enter file path: "
+3: Read file_path //Name of the file
+4: If NOT check_file(file_path) // check if the file exists
+    4.1: Print file_path, " doesn't exist."
+    4.2: Stop
+5: EndIf
+6: values_array ← file_count(file_path, LINE, WORD, CHAR) // Used to count lines, words and characters
+// Equivalent to wc -l -w -m file_path command in Linux
+// Returns three values in an array
+7: Print values_array[0] //Number of lines in the file
+8: Print values_array[1] //Number of words in the file
+9: Print values_array[2] //Number of characters in the file
+10: Stop
