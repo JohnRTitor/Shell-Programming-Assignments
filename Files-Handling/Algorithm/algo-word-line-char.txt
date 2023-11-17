@@ -8,9 +8,9 @@ Steps:
 
 1: Start
 2: Read file_name //Name of the file
-3: values ← wc -l -w -m file_name //This command is used to count lines, words and characters.
-4: values_array[] ← values //Array assignment to extract individual values.
-5: Print values_array[0] //Number of lines in the file
-6: Print values_array[1] //Number of words in the file
-7: Print values_array[2] //Number of characters in the file
-8: Stop
+3: values_array ← file_count(file_name, LINE, WORD, CHAR) // Used to count lines, words and characters
+// Equivalent to wc -l -w -m file_name command in Linux
+4: Print values_array[0] //Number of lines in the file
+5: Print values_array[1] //Number of words in the file
+6: Print values_array[2] //Number of characters in the file
+7: Stop
