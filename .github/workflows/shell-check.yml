@@ -1,0 +1,22 @@
+name: Shell Check
+
+on:
+  push:
+    paths:
+      - '**/*.sh'
+
+jobs:
+  shell-check:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up ShellCheck
+      run: |
+        sudo apt-get install shellcheck
+
+    - name: Run ShellCheck
+      run: |
+        shellcheck $(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep '\.sh$')
