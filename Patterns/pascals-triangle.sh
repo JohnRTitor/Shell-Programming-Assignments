@@ -6,7 +6,7 @@ function factorial
     local n=$1
     local fact=1
     for (( i=n; i>=1; i-- )); do
-        fact=$(($fact * $i))
+        fact=$(( fact * i))
     done
     echo $fact
 }
@@ -15,7 +15,7 @@ function nCr
 {
     local n=$1
     local r=$2
-    local n_minus_r=$(( $n - $r ))
+    local n_minus_r=$(( n - r ))
     local result=$(( $(factorial $n) / ( $(factorial $n_minus_r ) * $(factorial $r) ) ))
     echo $result
 }
