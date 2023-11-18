@@ -3,8 +3,8 @@
 # Math factorial function
 function factorial
 {
-    n=$1
-    fact=1
+    local n=$1
+    local fact=1
     for (( i=n; i>=1; i-- )); do
         fact=$(($fact * $i))
     done
@@ -13,10 +13,10 @@ function factorial
 # Each term in the triange is calculated using nCr
 function nCr
 {
-    n=$1
-    r=$2
-    n_minus_r=$(( $n - $r ))
-    result=$(( $(factorial $n) / ( $(factorial $n_minus_r ) * $(factorial $r) ) ))
+    local n=$1
+    local r=$2
+    local n_minus_r=$(( $n - $r ))
+    local result=$(( $(factorial $n) / ( $(factorial $n_minus_r ) * $(factorial $r) ) ))
     echo $result
 }
 
