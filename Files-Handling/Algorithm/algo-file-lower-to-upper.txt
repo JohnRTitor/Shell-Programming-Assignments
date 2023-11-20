@@ -9,7 +9,7 @@ Discussion:-
         We used it to convert the strings to upper case and store it in temporary file.
         mv(file_name.tmp, file_name)
         We then use mv command to move the content of the temporary file to the original file.
-        Effectively overwritting the original file with the upper case content.
+        Effectively overwriting the original file with the upper case content.
 
 
 
