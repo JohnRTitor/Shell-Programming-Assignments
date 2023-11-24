@@ -12,6 +12,13 @@ on:
       - '**/*.sh'
 
 jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v1
+      - name: Lint
+        uses: azohra/shell-linter@latest
   shell-check:
     runs-on: ubuntu-latest
 
