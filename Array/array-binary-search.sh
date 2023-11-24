@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
 # Function to perform binary search
-binary_search() {
+function binary_search
+{
     target=$1
     toSearch=("${@:2}")
     length=${#toSearch[@]}
