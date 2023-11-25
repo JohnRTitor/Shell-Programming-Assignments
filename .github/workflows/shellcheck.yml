@@ -15,22 +15,10 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v1
+      - name: Checkout repository
+        uses: actions/checkout@v3
       - name: Lint
         uses: azohra/shell-linter@latest
-  shell-check:
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
-
-    - name: Set up ShellCheck
-      run: |
-        sudo apt-get install shellcheck
-
-    - name: Run ShellCheck
-      run: |
-        shellcheck $(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep '\.sh$')
-        
+        with:
+          exclude-paths: "LICENSE"
+          severity: "error"

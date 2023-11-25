@@ -1,0 +1,25 @@
+                Algorithm - Word-Line-Character-Count
+
+Input:- Path of the file (file_name)
+Output:- Display the number of lines, words and character in the file
+Data Structure:- One Dimensional Array
+
+Discussion:-
+        file_count function is used to count lines, words and characters
+        Equivalent to "wc -l -w -m file_path" shell command in Linux
+        Returns three values in an array
+
+Steps:-
+
+1: Start
+2: Print "Enter file path: "
+3: Read file_path // path of the file
+4: If NOT check_file(file_path) // check if the file exists
+    4.1: Print file_path, " doesn't exist."
+    4.2: Stop
+5: EndIf
+6: values_array ← file_count(file_path, LINE, WORD, CHAR)
+7: Print values_array[0] //Number of lines in the file
+8: Print values_array[1] //Number of words in the file
+9: Print values_array[2] //Number of characters in the file
+10: Stop

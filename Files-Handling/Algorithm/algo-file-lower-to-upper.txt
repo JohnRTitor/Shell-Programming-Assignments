@@ -1,0 +1,29 @@
+                Algorithm - File-Lower-To-Upper
+
+Input:- Path of the file (file_name)
+Output:- A proper message for successful operation and failure.
+
+Discussion:-
+        tr '[:lower:]' '[:upper:]' < "$file_name" > "$file_name.tmp"
+        This shell command is used to translate or delete strings
+        We used it to convert the strings to upper case and store it in temporary file.
+        mv(file_name.tmp, file_name)
+        We then use mv command to move the content of the temporary file to the original file.
+        Effectively overwriting the original file with the upper case content.
+
+
+
+Steps:-
+
+1: Start
+2: Print "Enter file path: "
+3: Read file_path // Name of the file
+4: If NOT check_file(file_path) // check if the file exists
+    4.1: Print file_path, " doesn't exist."
+    4.2: Stop
+5: EndIf
+6: file_content ← read_file(file_path) // read the content of the file
+7: file_content ← toupper(file_content) // convert the content to upper case
+8: write_file(file_path, file_content) // overwrite the contents of the file
+9: Print "Content has been successfully converted to upper case."
+10: Stop

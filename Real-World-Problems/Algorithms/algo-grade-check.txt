@@ -1,0 +1,26 @@
+                Algorithm - Grade Calculator
+
+Input:- Percentage of marks (percentage)
+Output:- Grade based on the percentage
+
+
+Steps:-
+
+1: Start
+2: Print "Enter marks percentage: "
+3: If percentage < 0 OR percentage > 100 then
+    3.1: Print "Invalid value entered."
+4: Else If percentage >= 90 then
+    4.1: Print "Grade: O"
+5: Else If percentage >= 80 then
+    5.1: Print "Grade: A"
+6: Else If percentage >= 70 then
+    6.1: Print "Grade: B"
+7: Else If percentage >= 60 then
+    7.1: Print "Grade: C"
+8: Else If percentage >= 50 then
+    8.1: Print "Grade: D"
+9: Else
+    9.1: Print "Grade: F"
+10: EndIf
+11: Stop

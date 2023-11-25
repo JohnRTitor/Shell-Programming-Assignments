@@ -1,0 +1,60 @@
+                Algorithm - File-Employee-Data
+
+Input : User's choice (choice), name of the Employee (employeeName), ID of the Employee (employeeId), Designation of the Employee (employeeDesignation), Salary of the Employee (employeeSalary)
+Output : Display either all employees' data or a particular employee's salary based on the user's choice
+
+Discussion:
+        "grep" command is used to find some string or substring within a file or a memory segment.Here, it is used to find and display ths salary field based on Employee Id.
+
+Steps :
+
+1: Start
+2: While 1 do
+    2.1: Print "Menu:"
+    2.2: Print "1. Insert Employee Record"
+    2.3: Print "2. Display All Records"
+    2.4: Print "3. Display Salary by Employee ID"
+    2.5: Print "4. Exit"
+    2.6: Read choice //User's choice
+    2.7: Case choice=1
+        2.7.1: insertRecord() //function to insert employee details.
+    2.8: EndCase
+    2.9: Case choice=2
+        2.9.1: viewRecords() //function to display all the viewRecords
+    2.10: EndCase
+    2.11: Case choice=3
+        2.11.1: viewSalary
+    2.12: EndCase
+    2.13: Case choice=4
+        2.13.1: Exit
+    2.14: EndCase
+3: EndWhile
+4: Stop
+
+Procedure insertRecord()
+
+1: Start Procedure
+2: Read employeeName //Employee's Name
+3: Read employeeId //employeeId
+4: Read employeeDesignation //Employee's Designation
+5: Read employeeSalary //Employee's Salary
+6: writeRecords(employeeName, employeeId, employeeDesignation, employeeSalary) //This function is used to write the records of the employees in a text file
+7: Stop Procedure
+
+Procedure viewRecords
+
+1: Start Procedure
+2: Print dataFile //File that contains all the records.
+3: Stop Procedure
+
+Procedure viewSalary
+
+1: Start Procedure
+2: Read targetId
+3: salary ← findSalaryById(targetId) //This function is used to print salary of a employee using its ID
+4: If salary ≠ 0 then
+    4.1: Print salary
+5: Else
+    5.1: Print "Employee not found"
+6: EndIf
+7: Stop Procedure

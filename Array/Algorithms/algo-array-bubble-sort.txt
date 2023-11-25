@@ -1,15 +1,16 @@
                 Algorithm: Bubble Sort
 
-Input: A one dimensional array of numbers (arr)
-Output: Display the elements of the array (arr) after sorting.
+Input:- A array of numbers (arr)
+Output:- Display the elements of the array (arr) after sorting.
+Data Structure:- One Dimensional Array
 
-Steps:
+Steps:-
 
 1: Start
 2: Read arr //Array of elements
 3: swapped ← 0, size ← len(arr) //  size : size of the array
-4: For i=0 to size-1 do
-    4.1: for j=0 to size-1-i do
+4: For i=0 to size-1 do // Pass loop
+    4.1: For j=0 to size-1-i do // Comparison loop
         4.1.1: If arr[j] > arr[j+1] then
             4.1.1.1: temp ← arr[j]
             4.1.1.2: arr[j] ← arr[j+1]
@@ -24,3 +25,4 @@ Steps:
 6: For i=0 to size-1 do //Displaying the elements after sorting
     6.1: Print arr[i]
 7: EndFor
+8: Stop

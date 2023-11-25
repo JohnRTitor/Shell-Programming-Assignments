@@ -1,9 +1,9 @@
-                Algorithm - voting Eligibility
+                Algorithm - Voting Eligibility
 
-Input: User's age (age)
-Output: Print whether the user is eligible to vote or not.
+Input:- User's age (age)
+Output:- Print whether the user is eligible to vote or not.
 
-Steps:
+Steps:-
 
 1: Start
 2: Read age //User's age

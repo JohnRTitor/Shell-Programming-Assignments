@@ -1,0 +1,19 @@
+                Algorithm - Word Frequency Counter
+
+Input: File path and word to search
+Output: Number of occurrences of the word in the file
+
+Steps:-
+
+1: Start
+2: Print "Enter file path: "
+3: Read file_path
+4: If NOT check_file(file_path) // check if the file exists
+    4.1: Print file_path, " doesn't exist."
+    4.2: Stop
+5: EndIf
+6: Print "Enter the word to search: "
+7: Read word
+8: count ← search_file(file_path, word) // search the word in the file, it returns the number of occurrences of the word
+9: Print word, " appears ", count, " times in ", file_path
+10: Stop

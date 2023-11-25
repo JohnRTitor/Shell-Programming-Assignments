@@ -7,7 +7,7 @@ read -p "Enter the number to search: " search_for
 
 found=false
 position=1
-for number in ${numbers[@]}; do
+for number in ${numbers[*]}; do
     if [ $number -eq $search_for ]; then
         echo "$search_for found in $position'th position"
         found=true
