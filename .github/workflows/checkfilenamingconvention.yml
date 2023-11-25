@@ -1,9 +1,15 @@
 name: Check File Naming Convention
 
 on:
+  # Triggers the workflow on push or pull request events, but only when a .sh file is changed
   push:
-    branches:
-      - main  # Modify this based on your branch names
+    branches: [ "main", "dev"]
+    paths:
+      - '**/*.sh'
+  pull_request:
+    branches: [ "main" ]
+    paths:
+      - '**/*.sh'
 
 jobs:
   check-naming-convention:
@@ -11,7 +17,7 @@ jobs:
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Check File Naming Convention
         run: |

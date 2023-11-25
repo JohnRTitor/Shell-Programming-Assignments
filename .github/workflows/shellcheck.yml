@@ -1,7 +1,7 @@
 name: Shell Check
 
 on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
+  # Triggers the workflow on push or pull request events, but only when a .sh file is changed
   push:
     branches: [ "main", "dev"]
     paths:
@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@latest
       - name: Lint
         uses: azohra/shell-linter@latest
         with:
