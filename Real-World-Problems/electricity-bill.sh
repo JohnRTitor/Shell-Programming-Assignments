@@ -14,11 +14,11 @@ units=$((current - previous))
 bill=0
 
 # Calculate the bill based on the unit consumption
-if [ $units -le 100 ]; then
+if (( units <= 100 )); then
     bill=$(echo "$units * 3.5" | bc)
-elif [ $units -le 200 ]; then
+elif (( units <= 200 )); then
     bill=$(echo "(100 * 3.5) + (($units - 100) * 4.5)" | bc)
-elif [ $units -le 300 ]; then
+elif (( units <= 300 )); then
     bill=$(echo "(100 * 3.5) + (100 * 4.5) + (($units - 200) * 5.5)" | bc)
 else
     bill=$(echo "(100 * 3.5) + (100 * 4.5) + (100 * 5.5) + (($units - 300) * 6)" | bc)
