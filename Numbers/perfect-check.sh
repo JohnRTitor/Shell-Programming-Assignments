@@ -8,13 +8,13 @@ function is_perfect
 {
     local num=$1
     local sum=0
-    for ((i=1; i<=$(($num / 2)); i++)); do
+    for (( i=1; i<=$(( num / 2 )); i++ )); do
         # if it is a factor
-        if [ $(($num % $i)) -eq 0 ]; then
-            sum=$(($sum + $i))
+        if (( num % i == 0 )); then
+            sum=$(( sum + i ))
         fi
     done
-    if [ $num -eq $sum ]; then
+    if (( num == sum )); then
         echo true
     else
         echo false

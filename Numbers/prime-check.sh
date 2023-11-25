@@ -4,8 +4,8 @@ function is_prime
 {
     local num=$1 # capture the first argument passed
     local prime=true
-    if [ $num -eq 0 ] || [ $num -eq 1 ]; then
-        echo true
+    if (( num == 0 || num == 1 )); then
+        echo false
         return
     fi
     for ((i=2; i<$(echo "sqrt($num)" | bc); i++)); do
