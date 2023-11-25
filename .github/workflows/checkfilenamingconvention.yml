@@ -1,0 +1,25 @@
+name: Check File Naming Convention
+
+on:
+  push:
+    branches:
+      - main  # Modify this based on your branch names
+
+jobs:
+  check-naming-convention:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Check File Naming Convention
+        run: |
+          non_conforming_files=$(find . -type f | grep -E -v '^[a-z]+(-[a-z]+)*$')
+          if [ -n "$non_conforming_files" ]; then
+            echo "Files with non-conforming names:"
+            echo "$non_conforming_files"
+            exit 1
+          else
+            echo "All files follow the kebab case convention."
+          fi
