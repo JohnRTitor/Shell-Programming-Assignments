@@ -5,7 +5,7 @@ read -p "Enter space-seperated numbers: " numbers
 
 # Determine the size
 size=0
-for number in ${numbers[@]}; do
+for number in ${numbers[*]}; do
     size=$(($size + 1))
 done
 
