@@ -3,21 +3,21 @@
 # Function to perform binary search
 function binary_search
 {
-    target=$1
-    toSearch=("${@:2}")
-    length=${#toSearch[@]}
+    local target=$1
+    local to_search=("${@:2}")
+    local length=${#to_search[@]}
 
-    start=0
-    end=$((length - 1))
+    local start=0
+    local end=$((length - 1))
 
-    while [[ $start -le $end ]]; do
+    while (( start <= end )); do
         middle=$((start + (end - start) / 2))
-        middleElement=${toSearch[middle]}
+        middle_element=${to_search[middle]}
 
-        if [[ $middleElement -eq $target ]]; then
-            echo "Element $target found at position $(($middle + 1))"
+        if (( middle_element == target )); then
+            echo "Element $target found at position $((middle + 1))"
             return 0
-        elif [[ $middleElement -lt $target ]]; then
+        elif (( middle_element < target )); then
             start=$((middle + 1))
         else
             end=$((middle - 1))
