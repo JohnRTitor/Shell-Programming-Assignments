@@ -9,7 +9,7 @@ function is_prime
         return
     fi
     for ((i=2; i<$(echo "sqrt($num)" | bc); i++)); do
-        if [ $(echo "$num % $i" | bc) -eq 0 ]; then
+        if (( num % i == 0 )); then
             prime=false
         fi
     done

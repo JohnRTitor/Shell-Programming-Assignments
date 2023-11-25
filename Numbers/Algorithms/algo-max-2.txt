@@ -1,0 +1,15 @@
+                Algorithm - Maximum between two numbers
+Input:- Two numbers (num1, num2)
+Output:- Maximum number
+
+Steps:-
+
+1: Start
+2: Print "Enter num1, num2: "
+3: Read num1, num2
+4: If num1 > num2 then
+    4.1: Print num1, " is the greatest."
+5: Else
+    5.1: Print num2, " is the greatest."
+6: EndIf
+7: Stop

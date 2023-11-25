@@ -3,7 +3,7 @@
 read -p "How many terms you want to print? " terms
 
 
-if [ $terms -lt 1 ]; then
+if (( terms < 1 )); then
     echo "Invalid terms count."
     exit
 fi
@@ -15,7 +15,7 @@ num2=1
 echo -n "$num1, $num2, "
 
 for ((i=3; i<=terms; i++)); do
-    nextnum=$(($num1 + $num2))
+    nextnum=$((num1 + num2))
     # print the series
     echo -n "$nextnum, "
     num1=$num2

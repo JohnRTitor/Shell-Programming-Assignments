@@ -1,0 +1,17 @@
+                Algorithm - Maximum between three numbers
+Input:- Three numbers (num1, num2, num3)
+Output:- Maximum number
+
+Steps:-
+
+1: Start
+2: Print "Enter num1, num2, num3: "
+3: Read num1, num2, num3
+4: If num1 > num2 AND num1 > num3 then
+    4.1: Print num1, " is the greatest."
+5: Else If num2 > num3 then
+    5.1: Print num2, " is the greatest."
+6: Else
+    6.1: Print num3, " is the greatest."
+7: EndIf
+8: Stop
