@@ -13,9 +13,13 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
 
-      - name: Check Modified or Created Files
+      - name: Get Commit Hashes
         run: |
-          non_conforming_files=$(git diff --name-only HEAD~1 HEAD | grep -E -v '^[a-z]+(-[a-z]+)*$')
+          base_commit=$(git rev-parse HEAD~1)
+          current_commit=$(git rev-parse HEAD)
+
+          non_conforming_files=$(git diff --name-only $base_commit $current_commit | grep -E -v '^[a-z]+(-[a-z]+)*$')
+
           if [ -n "$non_conforming_files" ]; then
             echo "Files with non-conforming names:"
             echo "$non_conforming_files"
