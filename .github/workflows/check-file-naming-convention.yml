@@ -1,31 +1,25 @@
-name: Check File Naming Convention
+name: Check Kebab Case Naming Convention
 
 on:
-  # Triggers the workflow on push or pull request events, but only when a .sh file is changed
   push:
-    branches: [ "main", "dev"]
     paths:
-      - '**/*.sh'
-  pull_request:
-    branches: [ "main" ]
-    paths:
-      - '**/*.sh'
+      - '**/*'
 
 jobs:
-  check-naming-convention:
+  check-kebab-case:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v2
 
-      - name: Check File Naming Convention
+      - name: Check Modified or Created Files
         run: |
-          non_conforming_files=$(find . -type f | grep -E -v '^[a-z]+(-[a-z]+)*$')
+          non_conforming_files=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep -E -v '^[a-z]+(-[a-z]+)*$')
           if [ -n "$non_conforming_files" ]; then
             echo "Files with non-conforming names:"
             echo "$non_conforming_files"
             exit 1
           else
-            echo "All files follow the kebab case convention."
+            echo "All modified or created files follow the kebab case convention."
           fi
