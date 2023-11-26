@@ -16,6 +16,7 @@ jobs:
       - name: Get Commit Hashes
         run: |
           pwd
+          ls -a
           base_commit=$(git rev-parse HEAD~1)
           current_commit=$(git rev-parse HEAD)
 
