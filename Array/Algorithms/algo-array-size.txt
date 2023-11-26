@@ -1,0 +1,20 @@
+                    Algorithm - Array Size
+
+Input:- A array of numbers (arr)
+Output:- The size of the array (size)
+Discussion:-
+            Equivalent to Bash expression: size=${#numbers[@]}
+            In Python, and other languages, the size of an array can be determined
+            by using the len or similar function at runtime
+
+Steps:-
+
+1: Start
+2: Print "Enter space-separated numbers: "
+3: Read arr
+4: size = 0
+5: For each num in arr do
+    5.1: size ← size + 1
+6: EndFor
+7: Print "The size of the array is ", size
+8: Stop
