@@ -2,8 +2,13 @@ name: Check Kebab Case Naming Convention
 
 on:
   push:
+    branches: [ "main", "dev"]
     paths:
-      - '**/*'
+      - '**/*.sh'
+  pull_request:
+    branches: [ "main" ]
+    paths:
+      - '**/*.sh'
 
 jobs:
   check-kebab-case:
@@ -11,7 +16,9 @@ jobs:
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Get Commit Hashes
         run: |
