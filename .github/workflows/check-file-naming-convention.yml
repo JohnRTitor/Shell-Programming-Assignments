@@ -23,6 +23,7 @@ jobs:
           current_commit=$(git rev-parse HEAD)
 
           changed_files=$(git diff --name-only $base_commit $current_commit)
+          echo $changed_files
           export IFS='\n' # To correctly handle spaces in file names
           for files in changed_files; do
             echo "Changed file: $files"
