@@ -17,16 +17,14 @@ jobs:
 
       - name: Get Commit Hashes
         run: |
-          pwd
-          ls -a
           base_commit=$(git rev-parse HEAD~1)
           current_commit=$(git rev-parse HEAD)
 
-          non_conforming_files=$(git diff --name-only $base_commit $current_commit | grep -E -v '^[a-z]+(-[a-z]+)*$')
+          non_conforming_files=$(git diff --name-only $base_commit $current_commit | grep -E -v '^[a-z]+(-[a-z]+)*$' | grep -vE '/\.')
 
           if [ -n "$non_conforming_files" ]; then
             echo "Files with non-conforming names:"
-            echo "$non_conforming_files"
+            echo "$non_conforming_files" | awk '{print $0 "\n" "File Path: " ENVIRON["GITHUB_WORKSPACE"] "/" $0}'
             exit 1
           else
             echo "All modified or created files follow the kebab case convention."
