@@ -22,8 +22,14 @@ jobs:
           base_commit=$(git rev-parse HEAD~1)
           current_commit=$(git rev-parse HEAD)
 
-          non_conforming_files=$(git diff --name-only $base_commit $current_commit | grep -E -v '^[a-z]+(-[a-z]+)*$')
+          changed_files=$(git diff --name-only $base_commit $current_commit)
+          export IFS='\n' # To correctly handle spaces in file names
+          for files in changed_files; do
+            echo "Changed file: $files"
+          done
 
+          unset IFS
+          non_conforming_files=""
           if [ -n "$non_conforming_files" ]; then
             echo "Files with non-conforming names:"
             echo "$non_conforming_files"
