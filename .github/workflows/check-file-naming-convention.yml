@@ -15,27 +15,8 @@ jobs:
         with:
           fetch-depth: 0
 
-
-
-      - name: Get Commit Hashes
-        run: |
-          base_commit=$(git rev-parse HEAD~1)
-          current_commit=$(git rev-parse HEAD)
-
-          changed_files=$(git diff --name-only $base_commit $current_commit)
-          echo $changed_files
-          export IFS='\n' # To correctly handle spaces in file names
-          for files in changed_files; do
-            echo "Changed file: $files"
-          done
-
-          unset IFS
-          non_conforming_files=""
-          if [ -n "$non_conforming_files" ]; then
-            echo "Files with non-conforming names:"
-            echo "$non_conforming_files"
-            exit 1
-          else
-            echo "All modified or created files follow the kebab case convention."
-          fi
+      - name: Set up shell script permissions
+        run: chmod +x .github/workflows/check-kebab-case.sh
   
+      - name: Run Check-Kebab-Case Script
+        run: ./.github/workflows/check-kebab-case.sh
