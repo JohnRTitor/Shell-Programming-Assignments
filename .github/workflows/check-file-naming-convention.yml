@@ -20,17 +20,8 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Get Commit Hashes
-        run: |
-          base_commit=$(git rev-parse HEAD~1)
-          current_commit=$(git rev-parse HEAD)
-
-          non_conforming_files=$(git diff --name-only $base_commit $current_commit | grep -E -v '^[a-z]+(-[a-z]+)*$')
-
-          if [ -n "$non_conforming_files" ]; then
-            echo "Files with non-conforming names:"
-            echo "$non_conforming_files"
-            exit 1
-          else
-            echo "All modified or created files follow the kebab case convention."
-          fi
+      - name: Set up shell script permissions
+        run: chmod +x .github/workflows/check-kebab-case.sh
+  
+      - name: Run Check-Kebab-Case Script
+        run: ./.github/workflows/check-kebab-case.sh
