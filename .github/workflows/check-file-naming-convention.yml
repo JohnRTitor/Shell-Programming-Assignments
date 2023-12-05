@@ -20,11 +20,7 @@ jobs:
           base_commit=$(git rev-parse HEAD~1)
           current_commit=$(git rev-parse HEAD)
 
-          non_conforming_files=$(
-            git diff --name-only $base_commit $current_commit | \
-              grep -E -v '/\..*|/\.|[^/]+/[^/]+\.sh$' | \
-              grep -E '^[a-z]+(-[a-z]+)*\.sh$' \
-          )
+          non_conforming_files=$(git diff --name-only $base_commit $current_commit | grep -E -v '/\..*|/\.|[^/]+/[^/]+\.sh$' | grep -E '^[a-z]+(-[a-z]+)*\.sh$'  )
 
           if [ -n "$non_conforming_files" ]; then
             echo "Files with non-conforming names:"
