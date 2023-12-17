@@ -1,0 +1,18 @@
+                Algorithm - Inverted Right Angled star Pattern
+
+Input:- Number of rows (rows)
+Output:- Inverted right angle star triangle with desired number of rows
+
+Steps:-
+
+1: Start
+2: For i=1 to rows do
+    2.1: For j=1 t0 i-1 do
+        2.1.1: Print " "
+    2.2: EndFor
+    2.3: For k=i to rows do
+        2.3.1: Print "*"
+    2.4: EndFor
+    2.5: Print "\n"
+3: EndFor
+4: Stop
