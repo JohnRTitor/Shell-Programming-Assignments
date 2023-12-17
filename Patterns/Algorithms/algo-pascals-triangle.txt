@@ -1,4 +1,4 @@
-                Algorithm - Electricity Bill
+                Algorithm - Pascal's Triangle
 
 Input:- Number of rows (rows)
 Output:- Pascal's Triangle with desired number of rows
