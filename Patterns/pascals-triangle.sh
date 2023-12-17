@@ -24,10 +24,10 @@ read -p "How many rows? " rows
 
 for (( i=0; i<=rows; i++ )); do
     for (( space=0; space<=rows - i; space++ )); do
-        echo -n " " 
+        printf " " 
     done
     for (( j=0; j<=i; j++ )); do
-        echo -n "$(nCr $i $j) "
+        printf "%d " "$(nCr $i $j)"
     done
-    echo ""
+    printf "\n"
 done
