@@ -1,4 +1,3 @@
-
 #!/usr/bin/env bash
 
 read -p "Enter the number of rows : " rows
