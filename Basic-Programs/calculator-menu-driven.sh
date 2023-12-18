@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # get two numbers from stdin
 read -p "Enter first number: " num1
@@ -27,14 +27,14 @@ while true; do
             echo "Multiplication of $num1 and $num2 is: $((num1 * num2))"
             ;;
         4)
-            if [ $num2 -eq 0 ]; then
+            if (( num2 == 0 )); then
                 echo "Division by zero is not possible"
             else
                 echo "Division of $num1 and $num2 is: $((num1 / num2))"
             fi
             ;;
         5)
-            if [ $num2 -eq 0 ]; then
+            if (( num2 == 0 )); then
                 echo "Modulo by zero is not possible"
             else
                 echo "Modulo of $num1 and $num2 is: $((num1 % num2))"

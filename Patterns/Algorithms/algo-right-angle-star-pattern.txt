@@ -1,0 +1,15 @@
+                Algorithm - Right Angled Star Pattern
+
+Input:- Number of rows (rows)
+Output:- Right angle star triangle with desired number of rows
+
+Steps:-
+
+1: Start
+2: Read rows
+3: For i=1 to rows do
+    3.1: For j=1 to i do
+        3.1.1: Print "*"
+    3.2: EndFor
+4: EndFor
+5: Stop

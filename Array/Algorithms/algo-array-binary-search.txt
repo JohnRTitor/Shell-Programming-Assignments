@@ -1,4 +1,4 @@
-                Algorithm - Binary-search
+                Algorithm - Binary Search
 
 Input: Sorted array of elements (arr), Element to be searched (target)
 Output: Display the element with its position in the array else display a proper message if not found
@@ -11,25 +11,23 @@ Steps:
 4: binary_search(target, arr)
 5: Stop
 
-Procedure binary_search(target, arr)
+                Procedure binary_search(target, arr)
 
-1: Start Procedure
-2: target = target
-3: toSearch ← arr
-4: length ← #toSearch[@] //length of the array
-5: Start ← 0
-6: end ← length - 1
-7: While start < end do
-    7.1: middle ← start + (end - start)/2
-    7.2: middleElement ← toSearch[middle]
-    7.3: If middleElement = target then
-        7.3.1: Print "Element found at position " middle+1
-        7.3.2: Exit
-    7.4: If middleElement < target then
-        7.4.1: start ← middle + 1
-    7.5: Else
-        7.5.1: end ← middle + 1
-    7.6: EndIf
-8: EndWhile
-9: Print "Element not found "
-10: Stop Procedure
+1: Begin Procedure
+    2: length ← len(target) // len function calculates length of the array
+    3: start ← 0
+    4: end ← length - 1
+    5: While start < end do
+        5.1: middle ← start + (end - start)/2
+        5.2: If arr[middle] = target then
+            5.2.1: Print "Element found at position " middle+1
+            5.2.2: Exit
+        5.3: If arr[middle] < target then
+            5.3.1: start ← middle + 1
+        5.4: Else
+            5.4.1: end ← middle + 1
+        5.5: EndIf
+    6: EndWhile
+    // We reach here when element is not present in array
+    7: Print target, " not found"
+8: Stop Procedure

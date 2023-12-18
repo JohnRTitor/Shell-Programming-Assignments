@@ -1,0 +1,25 @@
+                Algorithm - Array Linear search
+
+Input:- A array of numbers (arr), a number to be searched (search_for)
+Output:- The position of the number to be searched (pos)
+
+Steps:-
+
+1: Start
+2: Print "Enter space-separated numbers: "
+3: Read arr
+4: Print "Enter the number to search: "
+5: Read search_for
+6: found ← false
+7: position ← 1 // Set initial position to 1
+8: For i=0 to len(arr) do // len function calculates length of the array
+    8.1: If arr[i] = search_for then
+        8.1.1: Print search_for, " found in position #", position
+        8.1.2: found ← true
+    8.2: EndIf
+    8.3: position ← position + 1
+9: EndFor
+10: If found = false then
+    10.1: search_for, " not found in the array."
+11: EndIf
+12: Stop

@@ -8,13 +8,13 @@
 hour=$(date +%H)
 
 if (( hour >= 5 && hour <= 11 )); then
-  time="Morning"
+    time="Morning"
 elif (( hour >= 12 && hour <= 16 )); then
-  time="Afternoon"
+    time="Afternoon"
 elif (( hour >= 17 && hour <= 20 )); then
-  time="Evening"
+    time="Evening"
 else
-  time="Night"
+    time="Night"
 fi
 
 # Display the greeting message

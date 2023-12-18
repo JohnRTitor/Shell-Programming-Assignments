@@ -1,0 +1,18 @@
+                Algorithm - Star Pyramid Pattern
+
+Input:- Number of rows (rows)
+Output:- Star Pyramid Pattern with desired number of rows
+
+Steps:-
+
+1: Start
+2: For i=1 to rows do
+    2.1: For j=i t0 rows-1 do
+        2.1.1: Print " "
+    2.2: EndFor
+    2.3: For k=1 to 2*i-1 do
+        2.3.1: Print "*"
+    2.4: EndFor
+    2.5: Print newline
+3: EndFor
+4: Stop

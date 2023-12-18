@@ -14,7 +14,7 @@ read -p "Enter c: " c
 discriminant=$(echo "scale=2; $b^2 - 4 * $a * $c" | bc)
 
 # Real and different roots
-if [ $discriminant -gt 0 ]; then
+if (( discriminant > 0 )); then
     root1=$(echo "scale=2; (-$b + sqrt($discriminant))/(2 * $a)" | bc)
     root2=$(echo "scale=2; (-$b - sqrt($discriminant))/(2 * $a)" | bc)
 
@@ -23,7 +23,7 @@ if [ $discriminant -gt 0 ]; then
     echo "Root 2: $root2"
 
 # Real and equal roots
-elif [ $discriminant -eq 0 ]; then
+elif (( discriminant == 0 )); then
     root1=$(echo "scale=2; (-$b + sqrt($discriminant))/(2 * $a)" | bc)
 
     echo "Roots are real and equal"

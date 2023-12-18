@@ -3,13 +3,13 @@
 function factorial
 {
     num=$1
-    if [ $num -eq 0 ]; then
+    if (( num == 0 )); then
         echo 1
         return
     fi
     fact=1
-    for ((i=num; i>=1; i--)); do
-        fact=$(($fact * $i))
+    for (( i=num; i>=1; i-- )); do
+        fact=$((fact * i))
     done
     echo $fact
 }
