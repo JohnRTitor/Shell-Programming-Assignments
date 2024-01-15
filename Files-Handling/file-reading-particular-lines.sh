@@ -8,7 +8,7 @@ IFS=' ' read -ra lines <<< "$input"
 count=1
 
 while IFS= read -ra line; do
-    if [[ "${lines[@]}" =~ "${count}" ]]; then
+    if [[ "${lines[*]}" =~ "${count}" ]]; then
         echo "${line[*]}"
     fi
     count=$((count+1))
