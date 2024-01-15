@@ -1,4 +1,4 @@
-#!usr/bin/env bash
+#!/usr/bin/env bash
 
 # Check if a username is provided as an argument
 if [ $# -eq 0 ]; then
