@@ -1,7 +1,7 @@
-                Algorithm - Right Angled star Pattern
+                Algorithm - Right Angled Star Pattern
 
 Input:- Number of rows (rows)
-Output:- Right angle star Triangle with desired number of rows
+Output:- Right angle star triangle with desired number of rows
 
 Steps:-
 
