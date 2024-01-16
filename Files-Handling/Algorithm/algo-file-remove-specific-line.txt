@@ -1,0 +1,20 @@
+                Algorithm - Removing specific lines
+
+Input: Name of the file: file_name
+Output: display the lines that does not contains the word "Unix"
+
+Steps:-
+
+1: Start
+2: Read file_name //Name of the file
+3: If file_name = NULL then
+    3.1: Exit //File not found
+4: EndIf
+5: While line ≠ NULL do
+    5.1: If contains_unix(lines) = 0 then //function to check whether the line contains the word "unix"
+        5.1.1: Write line → temp_file
+    5.2: EndIf
+6: EndWhile
+7: file_name ← temp_file
+8: Print "All lines containing 'Unix' have been deleted."
+9: Stop
