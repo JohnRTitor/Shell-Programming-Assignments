@@ -1,69 +1,89 @@
 #!/usr/bin/env bash
 
-dataFile="employee-data.txt"
+data_file="employee-data.csv"
 
-function insertRecord()
+function insert_record
 {
-    read -p "Enter the Employee name : " employeeName
-
-    read -p "Enter the Employee Id : " employeeId
-
-    read -p "Enter the Employee Designation : " employeeDesignation
-
-    read -p "Enter the Employee Salary : " employeeSalary
-
-    echo "Employee ID : $employeeId" >> "$dataFile"
-    echo "Employee Name : $employeeName" >> "$dataFile"
-    echo "Employee Designation : $employeeDesignation" >> "$dataFile"
-    echo "Employee Salary : $employeeSalary" >> "$dataFile"
+    local -i id salary
+    local name position
+    read -p "Enter employee ID: " id
+    read -p "Enter employee name: " name
+    read -p "Enter employee position: " position
+    read -p "Enter employee salary: " salary
+    printf "%d,%s,%s,%d\n" "$id" "$name" "$position" "$salary" >> "$data_file"
 }
 
-function viewRecords()
+function view_records
 {
-    echo "Emloyees Biodata : "
-    cat "$dataFile"
-}
-
-function viewSalary()
-{
-    read -p "Enter the Employee ID : " targetId
-
-    salary=$(grep -A3 "Employee ID : $targetId" employee-data.txt | awk '/Employee Salary/ {print $NF}')
-
-
-    if [ -n "$salary" ]; then
-        echo "Salary for Employee $target_id: $salary"
+    if [ -s "$data_file" ]; then
+        # column command is used to format the data
+        # -t creates a table
+        # -s fetches the content based on the seperator ','
+        column -t -s ',' "$data_file"
     else
-        echo "Employee not found or salary not available."
+        printf "No records found\n"
     fi
 }
 
-# Main menu
+function search_record
+{
+    local -i id
+    read -p "Enter employee ID: " id
+    # grep -w matches the whole word
+    # grep -i ignores the case
+    # grep -q suppresses the output
+    # we just want to check if the record exists
+    if grep -w -i -q "$id" "$data_file"; then
+        grep -w -i "$id" "$data_file"
+    else
+        printf "No records found\n"
+    fi
+}
+
+function get_salary
+{
+    local -i id
+    read -p "Enter employee ID: " id
+
+    if grep -w -i -q "$id" "$data_file"; then
+        grep -w -i "$id" "$data_file" | cut -d ',' -f 4
+    else
+        printf "No records found\n"
+    fi
+}
+
+# Check if the file exists, if not, create it with header
+if [ ! -e "$data_file" ]; then
+    printf "ID,Name,Position,Salary\n" >> "$data_file"
+fi
+
 while true; do
-    echo "Menu:"
-    echo "1. Insert Employee Record"
-    echo "2. Display All Records"
-    echo "3. Display Salary by Employee ID"
-    echo "4. Exit"
+    printf "1. Insert a record\n"
+    printf "2. Display all records\n"
+    printf "3. Search for a record\n"
+    printf "4. Display salary by employee ID\n"
+    printf "5. Exit\n"
 
-    read -p "Enter your choice (1-4): " choice
+    read -p "Enter an option: " option
 
-    case $choice in
+    case $option in
         1)
-            insertRecord
+            insert_record
             ;;
         2)
-            viewRecords
+            view_records
             ;;
         3)
-            viewSalary
+            search_record
             ;;
         4)
-            echo "Exiting the program."
+            get_salary
+            ;;
+        5)
             exit 0
             ;;
         *)
-            echo "Invalid choice. Please enter a number between 1 and 4."
+            printf "Invalid option. Please try again\n"
             ;;
     esac
 done

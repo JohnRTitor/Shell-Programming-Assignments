@@ -9,7 +9,6 @@
 !*.md
 !*.txt
 !*.json
-!*.csv
 
 # Don't ignore LICENSE
 !LICENSE
