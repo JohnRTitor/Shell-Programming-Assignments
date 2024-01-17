@@ -80,6 +80,7 @@ while true; do
             get_salary
             ;;
         5)
+            printf "Program Exited \n"
             exit 0
             ;;
         *)
