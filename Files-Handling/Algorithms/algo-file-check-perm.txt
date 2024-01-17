@@ -1,0 +1,35 @@
+                Algorithm - File Check Permissions
+
+Input:- Path of the file (file_path)
+Output:- File permissions (readable, writable, executable)
+
+Discussion:-    file_size, file_check, ... functions handle the conditions
+                In Shell script, we can use conditional operators to handle the checking
+                ls -l is also an alternative
+
+Steps:-
+
+1: Start
+2: Read file_path
+3: If file_path = NULL then
+    3.1: Print "No input provided!"
+    3.2: Exit
+4: Else If file_check(file_path) = false then
+    4.1: Print "File not found!"
+    4.2: Exit
+5: EndIf
+6: If file_size(file_path) = 0 then
+    6.1: Print "File is empty!"
+7: EndIf
+
+8: Print "File permissions: "
+9: If file_is_readable(file_path) = true then
+    9.1: Print "readable "
+10: EndIf
+11: If file_is_writable(file_path) = true then
+    11.1: Print "writable "
+12: EndIf
+13: If file_is_executable(file_path) = true then
+    13.1: Print "executable "
+14: EndIf
+15: Stop
