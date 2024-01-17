@@ -1,4 +1,4 @@
-                Algorithm - Word-Line-Character-Count
+                Algorithm - File Word, Line, Character, Count
 
 Input:- Path of the file (file_name)
 Output:- Display the number of lines, words and character in the file
