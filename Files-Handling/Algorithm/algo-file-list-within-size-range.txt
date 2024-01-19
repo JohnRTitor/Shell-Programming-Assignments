@@ -1,0 +1,15 @@
+               Algorithm - Reading particular lines in a file
+
+Input: minimum file size : min_size, maximum file size : max_size
+Output: display the names of the files in the current directory that have file size within the specified range.
+
+Steps:-
+
+1: Start
+2: file_list ← find_files(min_size,max_size)
+3: Print file_list
+4: Stop
+
+Discussion :
+
+The function find_files() is used to find all the files within the specified range [min_size,max_size] in the current directory.
