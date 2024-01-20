@@ -1,4 +1,4 @@
-               Algorithm - Armstrong Number Checking
+                Algorithm - Armstrong Number Checking
 
 Input: The number to be checked : num
 Output: Display whether the number is a armstrong number or not
@@ -7,39 +7,39 @@ Steps:-
 
 1: Start
 2: Read num
-3: If is_armstrong_number(num) == 1 then
-    3.1: Print "The number is a armstrong number.
+3: If is_armstrong_number(num) = true then
+    3.1: Print "The number is a armstrong number."
 4: Else
-    4.1: Print "The number is a armstrong number."
+    4.1: Print "The number is not a armstrong number."
 5: EndIf
 6: Stop
 
-            Procedure is_armstrong_number(num)
+                Procedure is_armstrong_number(num)
 
-1: Start Procedure
-2: sum ← 0
-3: number ← 0
-4: digits ← count_digits(num)
-5: While number > 0 do
-    5.1: digit ← number % 10
-    5.2: sum = sum + digit^digits
-    5.3: number ← number/10
-6: EndWhile
-7: If sum == num then
-    7.1: Return 1
-8: Else
-    8.1: Return 0
-9: EndIf
-10: Stop Procedure
+1: Begin Procedure
+    2: sum ← 0
+    3: number ← num
+    4: digits ← count_digits(num)
+    5: While number > 0 do
+        5.1: digit ← number mod 10
+        5.2: sum = sum + pow(digit, digits) // pow is a function to calculate power
+        5.3: number ← number / 10
+    6: EndWhile
+    7: If sum = num then
+        7.1: Return true
+    8: Else
+        8.1: Return false
+    9: EndIf
+10: End Procedure
 
-            Procedure count_digits(num)
+                Procedure count_digits(num)
 
-1: Start Procedure
-2: number ← num
-3: count ← 0
-4: While number > 0 do
-    4.1: count ← count + 1
-    4.2: number ← number/10
-5: EndWhile
-6: Return count
-7: Stop Procedure
+1: Begin Procedure
+    2: number ← num
+    3: count ← 0
+    4: While number > 0 do
+        4.1: count ← count + 1
+        4.2: number ← number / 10
+    5: EndWhile
+    6: Return count
+7: End Procedure
