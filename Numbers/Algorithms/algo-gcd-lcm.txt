@@ -1,18 +1,19 @@
                Algorithm - GCD - LCM of two numbers
 
-Input: First number : num1, Second number : num2
+Input: First number (num1), Second number (num2)
 Output: Display GCD and LCM of the numbers
 
 Steps:-
 
 1: Start
-2: Read num1,num2
+2: Read num1, num2
 3: For i=1 to num1 AND num2 do
-    3.1: If num1 % i == 0 AND num2 % i == 0 then
+    3.1: If num1 mod i == 0 AND num2 mod i == 0 then
         3.1.1: gcd ← i
     3.2: EndIf
+    3.3: i ← i + 1
 4: EndFor
-5: lcm ← (num1*num2)/gcd
-6: Print gcd
-7: Print lcm
+5: lcm ← (num1 * num2) / gcd
+6: Print "GCD = ", gcd
+7: Print "LCM = ", lcm
 8: Stop
