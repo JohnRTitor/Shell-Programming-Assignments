@@ -5,8 +5,8 @@ read -p "Enter the file path: " file_path
 function append_line
 {
     local new_line
-    read -p "Enter the line to append: " line
-    echo "$line" >> "$file_path"
+    read -p "Enter the line to append: " new_line
+    echo "$new_line" >> "$file_path"
     printf "New line appended successfully \n"
 }
 
@@ -43,11 +43,13 @@ fi
 
 while true; do
     printf "Main Menu \n"
+    printf "Current file: %s \n" "$(basename "$file_path")"
     printf "1. Append a line \n"
     printf "2. Edit a line \n"
     printf "3. Delete a line \n"
     printf "4. Search for a string \n"
-    printf "5. Exit \n"
+    printf "5. Print current content \n"
+    printf "6. Exit \n"
 
     read -p "Enter your choice: " option
 
@@ -65,6 +67,10 @@ while true; do
             search_string
             ;;
         5)
+            cat "$file_path"
+            printf "\n"
+            ;;
+        6)
             printf "Program exited. \n"
             exit 0
             ;;
