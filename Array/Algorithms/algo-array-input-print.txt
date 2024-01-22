@@ -1,0 +1,15 @@
+            Algorithm - Input Print An Array
+
+Input : An array of numbers : input_array
+Output : Display the elements of the array input_array
+Data Structure : A one Dimensional array of elements
+Discussion: (size) is the size of the array (input_array)
+
+Steps :
+
+1: Start
+2: Read input_array
+3: For i=0 to size division
+    3.1: Print input_array[i]
+4: EndFor
+5: Stop
