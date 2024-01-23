@@ -9,7 +9,7 @@ Steps:-
 
 1: Start
 2: Read arr //Array of elements
-3: swapped ← false, size ← len(arr) //  size : size of the array
+3: swapped ← false, size ← len(arr) //  size: size of the array
 4: For i=0 to size-1 do // Pass loop
     4.1: For j=0 to size-1-i do // Comparison loop
         4.1.1: If arr[j] > arr[j+1] then
@@ -20,10 +20,11 @@ Steps:-
         4.1.2: EndIf
     4.2: EndFor
     4.3: If swapped = false then
-        4.3.1: Exit
+        4.3.1: Exit Loop
     4.4: EndIf
 5: EndFor
-6: For i=0 to size-1 do //Displaying the elements after sorting
-    6.1: Print arr[i]
-7: EndFor
-8: Stop
+6: Print "Sorted array: "
+7: For i = 0 to size do
+    7.1: Print arr[i]
+8: EndFor
+9: Stop
