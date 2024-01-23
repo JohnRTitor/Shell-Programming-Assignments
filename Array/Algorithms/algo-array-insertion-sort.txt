@@ -1,18 +1,17 @@
             Algorithm - Insertion Sort
 
-Input: An array of numbers : array
+Input: An array of numbers (arr)
 Output: Display the numbers of the array after sorting
-Data Structure: A one Dimensional array of elements
-discussion: size is the size of the array 'array'
+Data Structure: One dimensional array
+Discussion: size is the size of the array
 
 Steps:
 
 1: Start
-2: Read arr //array of numbers
-3: For i=0 to size do
-    3.1: Print arr[i]
-4: EndFor
-5: for i = 1 to size do
+2: Print "Enter the elements (space-seperated): "
+3: Read arr
+4: size ← len(arr)
+5: For i = 1 to size - 1 do
     5.1: key ← arr[i]
     5.2: j ← i - 1
     5.5: While j >= 0 AND arr[j] > key do
@@ -21,7 +20,8 @@ Steps:
     5.4: EndWhile
     5.5: arr[j+1] ← key
 6: EndFor
-7: For i = 0 to size do
-    7.1: Print arr[i]
-8: EndFor
-9: Stop
+7: Print "Sorted array: "
+8: For i = 0 to size do
+    8.1: Print arr[i]
+9: EndFor
+10: Stop
