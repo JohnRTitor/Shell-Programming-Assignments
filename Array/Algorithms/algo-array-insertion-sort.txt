@@ -2,7 +2,7 @@
 
 Input: An array of numbers (arr)
 Output: Display the numbers of the array after sorting
-Data Structure: One dimensional array
+Data Structure: One Dimensional Array
 Discussion: size is the size of the array
 
 Steps:

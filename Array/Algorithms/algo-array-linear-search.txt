@@ -2,6 +2,7 @@
 
 Input:- A array of numbers (arr), a number to be searched (search_for)
 Output:- The position of the number to be searched (pos)
+Data Structure:- One Dimensional Array
 
 Steps:-
 
