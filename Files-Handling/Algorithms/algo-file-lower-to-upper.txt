@@ -11,8 +11,6 @@ Discussion:-
         We then use mv command to move the content of the temporary file to the original file.
         Effectively overwriting the original file with the upper case content.
 
-
-
 Steps:-
 
 1: Start
