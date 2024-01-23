@@ -13,18 +13,17 @@ function string_reverse
 }
 
 # Read input from the user
-echo "Enter a string: "
-read original_string
+read -p "Enter a string: " original_string
 
 # Reverse the input string
 reversed_string=$(string_reverse "$original_string")
 
-echo "Input string: $original_string"
-echo "Reversed string: $reversed_string"
+printf "Input string: %s \n" "$original_string"
+printf "Reversed string: %s \n" "$reversed_string"
 
 # Check if the reversed string is the same as the original string
 if [ "$original_string" == "$reversed_string" ]; then
-    echo "The input string is a palindrome."
+    printf "The input string is a palindrome. \n"
 else
-    echo "The input string is not a palindrome."
+    printf "The input string is not a palindrome. \n"
 fi
