@@ -1,12 +1,12 @@
                 Algorithm - Reading particular lines in a file
 
 Input: Name of the file: file_name, Starting line number : start, Ending line number : end
-Output: display the lines within the range [start,Stop]
+Output: display the lines within the range [start, stop]
 
 Steps:-
 
 1: Start
-2: If file_name = NULL then
+2: If file_check(file_name) = NULL then
     2.1: Exit
 3: EndIf
 4: count=0
