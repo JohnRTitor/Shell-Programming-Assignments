@@ -1,0 +1,24 @@
+                Algorithm - Shell greeting
+
+Input:- NULL
+Output:- Greet the user according to the time of the day
+Discussion:-    In Bash, date command can be used to extract
+                date and time information
+                This script is to be executed at shell login
+
+Steps:-
+
+1: Start
+2: hour ← get_time(H) // get the current hour
+3: If hour >= 5 and hour <= 11 then
+    3.1: time ← "Morning"
+4: Else If hour >= 12 AND hour <= 16 then
+    3.2: time ← "Afternoon"
+5: Else If hour >= 17 AND hour <= 20 then
+    5.1: time ← "Evening"
+6: Else
+    6.2: time ← "Night"
+7: EndIf
+8: Print "Good ", time, "! Welcome to the system!"
+9: Stop
+
