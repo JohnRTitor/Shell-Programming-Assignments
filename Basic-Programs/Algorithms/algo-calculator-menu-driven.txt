@@ -1,13 +1,13 @@
                 Algorithm - Menu Driven Calculator
 
-Input: First number : num1, Second number : num2
-Output: Display addition,subtraction,multiplication,division,modulo as per user's choice
+Input: First number (num1), Second number (num2)
+Output: Display addition, subtraction, multiplication, division, modulo as per user's choice
 
 Steps:-
 
 1: Start
-2: Read num1,num2
-3: While 1 division
+2: Read num1, num2
+3: While (true) do
     3.1: Print "** Main Menu **"
     3.2: Print "1. Addition"
     3.3: Print "2. Subtraction"
@@ -19,36 +19,36 @@ Steps:-
     3.9: Read option
     3.10: Case option = 1
         3.10.1: Print num1 + num2
-    3.11: End Case
+    3.11: EndCase
     3.12: Case option = 2
         3.12.1: Print num1 - num2
-    3.13: End Case
+    3.13: EndCase
     3.14: Case option = 3
         3.14.1: Print num1 * num2
-    3.15: End Case
+    3.15: EndCase
     3.16: Case option = 4
         3.16.1: If num2 = 0 then
-            3.16.1.1: Exit //Division by Zero is not possible
+            3.16.1.1: Exit // Division by Zero is not possible
         3.16.2: Else
             3.16.2.1: Print num1 / num2
         3.16.3: EndIf
-    3.17: End Case
+    3.17: EndCase
     3.18: Case option = 5
         3.18.1: If num2 = 0 then
-            3.18.1.1: Exit //Modulo by Zero is not possible
+            3.18.1.1: Exit // Modulo by Zero is not possible
         3.18.2: Else
             3.18.2.1: Print num1 % num2
         3.18.3: EndIf
-    3.19: End Case
+    3.19: EndCase
     3.20: Case option = 6
         3.20.1: Read num1
         3.20.2: Read num2
-    3.21: End Case
+    3.21: EndCase
     3.22: Case option = 7
         3.22.1: Exit
-    3.23: End Case
-    3.24: 3.18: Case default
-        3.24.1: Print "Invalid option"
-    3.25: End Case
+    3.23: EndCase
+    3.24: 3.18: Case Default
+        3.24.1: Print "Invalid option. Please try again."
+    3.25: EndCase
 4: EndWhile
 5: Stop
