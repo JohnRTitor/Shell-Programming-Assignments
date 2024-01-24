@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Check if a file path is provided as a command line argument
 if [ $# -eq 0 ]; then
@@ -20,7 +20,9 @@ temp_file=$(mktemp)
 # Loop through each line in the original file
 while IFS= read -r line; do
     # Check if the line contains 'UNIX'
-    if ! echo "$line" | grep -q 'UNIX'; then
+    # -i: ignore case
+    # -q: quiet mode, only exit status is returned
+    if ! echo "$line" | grep -iq 'UNIX'; then
         # If not, append the line to the temporary file
         echo "$line" >> "$temp_file"
     fi

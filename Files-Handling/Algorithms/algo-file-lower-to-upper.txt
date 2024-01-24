@@ -11,19 +11,17 @@ Discussion:-
         We then use mv command to move the content of the temporary file to the original file.
         Effectively overwriting the original file with the upper case content.
 
-
-
 Steps:-
 
 1: Start
 2: Print "Enter file path: "
 3: Read file_path // Name of the file
-4: If NOT check_file(file_path) // check if the file exists
+4: If file_check(file_path) = NULL then // check if the file exists
     4.1: Print file_path, " doesn't exist."
     4.2: Stop
 5: EndIf
-6: file_content ← read_file(file_path) // read the content of the file
+6: file_content ← file_read(file_path) // read the content of the file
 7: file_content ← toupper(file_content) // convert the content to upper case
-8: write_file(file_path, file_content) // overwrite the contents of the file
+8: file_write(file_path, file_content) // overwrite the contents of the file
 9: Print "Content has been successfully converted to upper case."
 10: Stop

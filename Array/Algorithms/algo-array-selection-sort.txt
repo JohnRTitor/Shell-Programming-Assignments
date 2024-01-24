@@ -1,0 +1,31 @@
+                Algorithm - Bubble Sort
+
+Input:- A array of numbers (arr)
+Output:- Display the elements of the array (arr) after sorting.
+Data Structure:- One Dimensional Array
+Discussion:- size is the size of the array (arr)
+
+Steps:
+
+1: Start
+2: Read arr //array of numbers
+3: For i=0 to size do
+    3.1: Print arr[i]
+4: EndFor
+5: For i=0 to size-1 do
+    5.1: min_index ← min_index
+    5.2: For j=i+1 to size do
+        5.2.1: If arr[j] < arr[min_index] then
+            5.2.1.1: min_index ← j
+        5.2.2: EndIf
+    5.3: EndFor
+    5.4: If min_index ≠ i then
+        5.4.1: temp ← arr[i]
+        5.4.2: arr[i] ← arr[min_index]
+        5.4.3: arr[min_index] ← temp
+    5.5: EndIf
+6: EndFor
+7: For i=0 to size do
+    7.1: Print arr[i]
+8: EndFor
+9: Stop

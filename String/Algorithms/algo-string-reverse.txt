@@ -1,0 +1,19 @@
+                Algorithm - String Reverse
+
+Input:- A string from user (original_string)
+Output:- Reversed string (reversed_string)
+
+Steps:-
+
+1: Start
+2: Print "Enter a string: "
+3: Read original_string
+4: size ← len(original_string)
+5: reversed_string ← ""
+6: For i = size-1 to 0
+    6.1: reversed_string[i] ← original_string[size-i-1]
+    6.2: i ← i-1
+7: EndFor
+8: Print "Input string: ", original_string
+9: Print "Reversed string: ", reversed_string
+10: Stop

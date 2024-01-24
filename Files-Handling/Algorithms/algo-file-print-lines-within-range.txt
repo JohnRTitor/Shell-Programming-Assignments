@@ -1,0 +1,27 @@
+                Algorithm - Reading particular lines in a file
+
+Input:- Name of the file (file_name), Starting line number (start), Ending line number (end)
+Output:- display the lines within the range [start, stop]
+
+Steps:-
+
+1: Start
+2: Read file_name
+3: If file_check(file_name) = NULL then
+    3.1: Exit
+4: EndIf
+
+5: Print "Enter the starting line number: "
+6: Read start
+7: Print "Enter the ending line number: "
+8: Read stop
+
+9: content ← file_read(file_name)
+10: count ← 0
+11: For each line in content do
+    11.1: count ← count + 1
+    11.2: If count >= start AND count <= stop then
+        11.2.1: Print line
+    11.3: EndIf
+12: EndFor
+13: Stop

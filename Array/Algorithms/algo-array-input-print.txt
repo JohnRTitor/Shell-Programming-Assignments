@@ -1,0 +1,22 @@
+            Algorithm - Array Input and Output
+
+Input:- An array of numbers (arr)
+Output:- Display the elements of the array (arr)
+Data Structure:- One Dimensional Array
+Discussion:- size is the size of the array.
+            In Bash, there is no need to read the size of the array.
+            As we can parse the elements directly and determine the size at run time
+
+Steps:-
+
+1: Start
+2: Print "Enter the size: "
+3: Read size
+4: For i = 0 to size - 1 do
+    4.1: Read arr[i]
+5: EndFor
+6: Print "The elements of the array are: "
+7: For i = 0 to size - 1 do
+    7.1: Print arr[i]
+8: EndFor
+9: Stop

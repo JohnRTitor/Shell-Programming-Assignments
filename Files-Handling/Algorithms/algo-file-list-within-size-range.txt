@@ -1,0 +1,22 @@
+               Algorithm - Finding files with size in a specified range
+
+Input:- minimum file size : min_size, maximum file size : max_size
+Output:- Display the names of the files in the current directory that have file size within the specified range.
+Discussion:- The function find_files() is used to find all the files within the specified range [min_size,max_size] in the current directory
+
+Steps:-
+
+1: Start
+2: Print "Enter the minimum file size: "
+3: Read min_size
+4: Print "Enter the maximum file size: "
+5: Read max_size
+6: current_directory ← get_current_directory()
+7: file_list ← find_files(current_directory)
+8: Print "Files with size in the range [", min_size, ",", max_size, "]"
+9: For each file in file_list do
+    9.1: If min_size <= file_size(size) AND file_size(file) <= max_size then
+        9.1.1: Print file
+    9.2: EndIf
+10: EndFor
+11: Stop

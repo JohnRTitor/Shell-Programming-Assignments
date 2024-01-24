@@ -1,0 +1,86 @@
+                Algorithm - Menu Driven Program - File Actions
+
+Input:- File path (file_path), option (option), further inputs based on option
+Output:- Menu to perform file actions and relevant output based on options
+
+Steps:-
+
+1: Start
+2: Read file_path
+3: If is_file(file_path) = false then
+    3.1: file_create(file_path)
+4: EndIf
+5: While (true) do
+    5.1: Print "Main Menu"
+    // basename(file_path) returns the file name from the file path
+    5.2: Print "Current file: ", basename(file_path) 
+    5.3: Print "1. Append a line"
+    5.4: Print "2. Edit a line"
+    5.5: Print "3. Delete a line"
+    5.6: Print "4. Search for a string"
+    5.7: Print "5. Print current content"
+    5.8: Print "6. Exit"
+    5.9: Read option
+
+    5.10: Case option = 1
+        5.10.1: append_line(file_path)
+    5.11: Case option = 2
+        5.11.1: edit_line(file_path)
+    5.12: Case option = 3
+        5.12.1: delete_line(file_path)
+    5.13: Case option = 4
+        5.13.1: search_string(file_path)
+    5.14: Case option = 5
+        5.14.1: content ← file_read(file_path)
+        5.14.2: Print content
+    5.15: Case option = 6
+        5.15.1: Print "Program exited."
+        5.15.2: Exit
+    5.16: Case Default
+        5.16.1: Print "Invalid option. Please try again."
+    5.17: EndCase
+5: EndWhile
+6: Stop
+
+                Procedure append_line (file_path)
+
+Steps:-
+
+1: Begin Procedure
+    2: Read new_line
+    3: file_append(file_path, new_line)
+    4: Print "New line appended successfully"
+5: End Procedure
+
+                Procedure edit_line (file_path)
+
+Steps:-
+
+1: Begin Procedure
+    2: Read line_number
+    3: Print "Old line: "
+    4: Print file_read(file_path, line_number)
+    5: Read new_line
+    6: file_edit(file_path, line_number, new_line)
+    7: Print "Line ", line_number, " edited successfully"
+8: End Procedure
+
+                Procedure delete_line (file_path)
+
+Steps:-
+
+1: Begin Procedure
+    2: Read line_number
+    3: file_delete(file_path, line_number)
+    4: Print "Line ", line_number, " deleted successfully"
+5: End Procedure
+
+                Procedure search_string (file_path)
+
+Steps:-
+
+1: Begin Procedure
+    2: Read search_for
+    3: Print "Search results: "
+    4: Print file_search(file_path, search_for)
+5: End Procedure

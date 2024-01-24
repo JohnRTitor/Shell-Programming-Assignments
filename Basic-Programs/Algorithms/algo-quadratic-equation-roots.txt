@@ -1,0 +1,28 @@
+                Algorithm - Roots of Quadratic Equation
+
+Input: Coefficients - a, b, c
+Output: Roots of the Quadratic equation
+Discussion: sqrt() function is used to find square root of the value passed
+
+Steps:
+
+1: Start
+2: Read a,b,c
+3: discriminant ← (b^2) - 4*a*c
+4: If discriminant > 0 then
+    4.1: root1 ← ( b + sqrt(discriminant)/2*a )
+    4.2: root1 ← ( b - sqrt(discriminant)/2*a )
+    4.3: Print "Roots are real and different"
+    4.4: Print root1,root2
+5: Else If discriminant = 0 then
+    5.1: root1 ← ( b + sqrt(discriminant)/2*a )
+    5.2: Print "Roots are real and equal"
+    5.3: Print root1
+6: Else
+    6.1: real_part ← ( -b/(2*a))
+    6.2: imaginary_part ← (sqrt(-1 * discriminant)/(2*a))
+    6.3: Print "Roots are complex and different"
+    6.4: Print "root 1 : ", real_part+imaginary_part
+    6.5: Print "root 2 : ", real_part-imaginary_part
+7: EndIf
+8: Stop
