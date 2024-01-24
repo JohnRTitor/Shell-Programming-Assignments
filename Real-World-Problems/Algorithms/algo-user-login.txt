@@ -1,23 +1,21 @@
                 Algorithm - User Login Check
 
-Input:- username //Name of the user
+Input:- Username of the user (username)
 Output:- Display the login time and the duration
+Discussion: In Linux, who command can be used to get a list of logged in user_list
+            and time of their logging in
+            date command can be used to get the current time
 
 Steps:-
 
 1: Start
-2: If username = NULL then
-    2.1: Print "Usage : type username"
-    2.2: Exit
-3: EndIf
-4: If who | grep -wq username then
-    4.1: login_time=get_login_time(username)
-    4.2: duration_seconds=date() - date(login_time) //date() gives times past since epoch in seconds
-    4.3: hours=duration_seconds/3600
-    4.4: minutes=(duration_seconds%3600)/60
-    4.5: seconds=duration_seconds%60
-    4.6: echo "username is logged in since ",login_time
-    4.7: echo "Duration : ",hours,minutes,seconds
+2: Read username
+3: user_list ← get_logged_in_users()
+4: If username in user_list then
+    4.1: login_time ← get_login_time(username)
+    4.2: duration ← get_current_time() - login_time
+    4.3: Print username, "logged in at", login_time, "and has been logged in for", duration
 5: Else
-    5.1: username,"is not currently logged in"
+    5.1: Print username, " not logged in"
 6: EndIf
+7: Stop
