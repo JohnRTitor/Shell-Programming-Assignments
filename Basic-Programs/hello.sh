@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
-echo "What is your name?"
-read name
-echo "Hello, $name"
+# Read name from console
+read -p "What is your name?" name
+# Greet the user
+printf "Hello, %s!\n" "$name"
