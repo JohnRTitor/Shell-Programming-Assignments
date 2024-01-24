@@ -2,7 +2,7 @@
 
 # Check if a filename was provided as an argument
 if [ $# -eq 0 ]; then
-    echo "Please provide a filename as an argument."
+    printf "Usage: bash %s file_name start_line stop_line" "$0"
     exit 1
 fi
 
@@ -15,6 +15,6 @@ count=0
 while read line;do
     count=$((count + 1))
     if((count >= start && count <= stop));then
-        echo $line
+        printf "%s\n" "$line"
     fi
 done < "$file_name"

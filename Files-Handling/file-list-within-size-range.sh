@@ -2,7 +2,8 @@
 
 # Check if arguments are provided or not
 if [ $# -ne 2 ]; then
-    printf "Please provide the required arguments: min_size and max_size properly (in bytes). \n"
+    printf "Usage: bash %s min_size max_size\n" "$0"
+    printf "min_size and max_size properly (in bytes) \n"
     exit 1
 fi
 
