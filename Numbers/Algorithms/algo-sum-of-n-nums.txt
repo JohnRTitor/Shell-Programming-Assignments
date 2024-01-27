@@ -14,3 +14,4 @@ Steps:-
     5.2: i ← i + 1
 6: EndFor
 7: Print "The sum of n natural numbers is: sum"
+8: Stop
