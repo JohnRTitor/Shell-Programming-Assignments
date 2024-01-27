@@ -26,7 +26,7 @@ function binary_search
         fi
     done
 
-    printf "Element %d not found in the array." "$target"
+    printf "Element %d not found in the array. \n" "$target"
     return 1
 }
 
