@@ -1,4 +1,4 @@
-                Algorithm - Bubble Sort
+                Algorithm - Selection Sort
 
 Input:- A array of numbers (arr)
 Output:- Display the elements of the array (arr) after sorting.
