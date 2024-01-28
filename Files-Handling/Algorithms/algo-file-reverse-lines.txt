@@ -1,0 +1,26 @@
+                Algorithm - Printing lines of a file in reverse order
+
+Input:- Path of a file (file_path)
+Output:- Print the lines of the file in reverse order
+Data Structure:- Stack
+Discussion:-    Stack is used to store the lines of the file. 
+                The lines are pushed into the stack and 
+                then popped out to print them in reverse order.
+
+Steps:-
+
+1: Start
+2: Read file_path
+3: If file_check(file_path) = NULL then
+    3.1: Print "File not found or inaccesible!"
+    3.2: Exit
+4: EndIf
+
+5: content ← file_read(file_path)
+6: For each line in content do
+    6.1: stack_push(line)
+7: EndFor
+8: While stack is not empty do
+    8.1: Print stack_pop()
+9: EndWhile
+10: Stop

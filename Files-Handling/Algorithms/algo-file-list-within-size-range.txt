@@ -1,4 +1,4 @@
-               Algorithm - Finding files with size in a specified range
+               Algorithm - Finding files with size in a specified range in the current directory
 
 Input:- minimum file size : min_size, maximum file size : max_size
 Output:- Display the names of the files in the current directory that have file size within the specified range.
