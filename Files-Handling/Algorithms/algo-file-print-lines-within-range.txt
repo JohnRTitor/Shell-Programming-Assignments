@@ -1,7 +1,7 @@
-                Algorithm - Reading particular lines in a file
+                Algorithm - Reading lines from a file within a range (start, stop)
 
 Input:- Name of the file (file_name), Starting line number (start), Ending line number (end)
-Output:- display the lines within the range [start, stop]
+Output:- Display the lines within the range [start, stop]
 
 Steps:-
 

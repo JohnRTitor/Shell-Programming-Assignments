@@ -1,4 +1,4 @@
-                Algorithm - File-Lower-To-Upper
+                Algorithm - Convertion of file content to upper case
 
 Input:- Path of the file (file_name)
 Output:- A proper message for successful operation and failure.

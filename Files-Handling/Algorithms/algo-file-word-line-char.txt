@@ -1,6 +1,6 @@
                 Algorithm - File Word, Line, Character, Count Printing
 
-Input:- Path of the file (file_name)
+Input:- Path of the file (file_path)
 Output:- Display the number of lines, words and character in the file
 Data Structure:- One Dimensional Array
 

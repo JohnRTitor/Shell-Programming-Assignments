@@ -1,4 +1,4 @@
-                Algorithm - Reading particular lines in a file
+                Algorithm - Reading only specified lines in a file
 
 Input:- Name of the file (file_path)
         Line numbers to be printed (lines)

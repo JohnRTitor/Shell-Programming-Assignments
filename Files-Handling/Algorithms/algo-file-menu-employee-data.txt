@@ -1,4 +1,4 @@
-                Algorithm - File Employee Record Management System
+                Algorithm - Menu Driven Program - File Employee Record Management System
 
 Input:- Option for the menu action, Employee ID, Employee Name, Employee Position, Employee Salary when inserting
 Output:- Depending on user's choice

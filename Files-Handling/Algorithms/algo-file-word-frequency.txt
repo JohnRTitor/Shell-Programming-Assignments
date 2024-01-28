@@ -1,4 +1,4 @@
-                Algorithm - Word Frequency Counter
+                Algorithm - Frequency of a particular word in a file
 
 Input: File path and word to search
 Output: Number of occurrences of the word in the file

@@ -1,4 +1,4 @@
-                Algorithm - Removing specific lines
+                Algorithm - Removing specific lines from a file containing the word "UNIX"
 
 Input: Name of the file: file_name
 Output: display the lines that does not contains the word "Unix"
